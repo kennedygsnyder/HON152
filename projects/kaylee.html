@@ -2,35 +2,62 @@
 <html>
 <head>
 <link rel="stylesheet" href="../css/style.css">
-<div class="navbar">
-    <a class="active" href="../index.html">Home</a>
-    <a href="../class-information.html">Class Information</a>
-    <a href="../creative-projects.html">Creative Projects</a>
-</div> 
+<nav class="navbar">
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="../class-information.html" class="nav-link">Class Information</a>
+        </li>
+        <li class="nav-item">
+            <a href="../creative-projects.html" class="nav-link">Creative Projects</a>
+        </li>
+    </ul>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
+
+<script src="../scripts/script.js"></script> 
 
 <style> 
-    h1 {
-        margin-bottom: 40px;
-    }
     img {
       float: left;
       margin-right: 20px;
+      width: 50vw;
     }
-  
+    a { 
+      font-size: 2rem;
+      float: left;
+      width: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
     p {
-      text-align: left;
-      font-size: 25px;
+      text-align: justify;
+      margin-right: 1rem;
+      margin-left: 1rem;
     }
+    @media (max-width: 1200px) { 
+        img {
+            width: 80vw;
+            margin-left: calc(10vw - 2rem);
+            margin-bottom: 3rem;
+        }
+    }
+
 </style>
 </head>
 
 <body>
     <div class="container">
-    <a href="../creative-projects.html" style="float: left">← Back</a>
+    <a href="../creative-projects.html">← Back</a>
     <h1>Kaylee Bliss</h1>
     <div>
         <p>
-        <img src="../resources/kaylee.jpg" style="max-width: 40%">
+        <img src="../resources/kaylee.jpg">
 
         &emsp;&emsp;"For this creative project, I painted a picture of an infiltrometer. This painting is significant
         to me because it represents the large amount of time I devoted to testing infiltration and

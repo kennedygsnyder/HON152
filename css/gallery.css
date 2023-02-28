@@ -54,14 +54,7 @@
     color: black;
 }
 
-@media (min-width: 1200px) {
-    #gallery {
-        -moz-column-count:    4;
-        -webkit-column-count: 4;
-        column-count:         4;
-    }
-}
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
     #gallery {
         -moz-column-count:    3;
         -webkit-column-count: 3;
@@ -69,12 +62,15 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
     #gallery {
         -moz-column-count:    2;
         -webkit-column-count: 2;
         column-count:         2;
     }
+    a {
+        font-size: 1rem;
+      }
 }
 
 @media (max-width: 400px) {
