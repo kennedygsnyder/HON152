@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/project.css">
+<nav class="navbar">
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="../class-information.html" class="nav-link">Class Information</a>
+        </li>
+        <li class="nav-item">
+            <a href="../creative-projects.html" class="nav-link">Creative Projects</a>
+        </li>
+    </ul>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
+
+<script src="../scripts/script.js"></script> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,0,200" />
+
+<style>
+    .slideshow-container {
+        display: flex; 
+        align-items: stretch;
+        justify-content: center;
+        padding: 0px;
+    }
+   img {
+    display: block;
+   } 
+
+   #leftbutton {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+    z-index:1;
+    width: 6rem;
+    margin-right: -6rem;
+   }
+
+   #leftbutton:hover {
+    background: rgba(0,0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); 
+   }
+
+   #rightbutton {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    position: relative;
+    z-index:1;
+    width: 6rem;
+    margin-left: -6rem;
+   }
+
+   #rightbutton:hover {
+    background: rgba(0,0,0,0);
+    background: linear-gradient(-90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); 
+   }
+
+   button {
+    display: flex;
+    align-items: center;
+    border: solid black 0px;
+    width: 6rem;
+    background-color: rgba(0,0,0,0);
+   }
+   button:hover {
+    color: white;
+   }
+
+   .material-symbols-rounded {
+    font-size: 6rem;
+    transform: scale(.75, 1);
+   }
+
+</style>
+
+<script>
+let curr_slide = 1;
+function forwards() {
+    curr_slide++;
+    if (curr_slide >= 6) {
+        curr_slide = 1;
+    }
+    let new_src = "../resources/dexter_" + curr_slide + ".png";
+    document.getElementById("image").src = new_src;
+}
+function backwards() {
+    curr_slide--;
+    if (curr_slide <= 0) {
+        curr_slide = 5;
+    }
+    let new_src = "../resources/dexter_" + curr_slide + ".png";
+    document.getElementById("image").src = new_src;
+}
+</script>
+</head>
+
+<body>
+    <div class="container">
+    <a class="back-button" href="../creative-projects.html">← Back</a>
+    <h1>Dexter Vilt</h1>
+    <div class="slideshow-container">
+        <div id="leftbutton">
+            <button onclick="backwards()" style="justify-content: flex-start">
+                <span class="material-symbols-rounded" style="margin-left:-1rem">chevron_left</span>
+            </button> 
+        </div>
+        <div>
+            <img id="image" src="../resources/dexter_1.png">
+        </div>
+        <div id="rightbutton">
+            <button onclick="forwards()" style="justify-content: flex-end">
+                <span class="material-symbols-rounded" style="margin-right:-1rem">chevron_right</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
