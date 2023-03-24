@@ -7,6 +7,10 @@
   box-sizing: border-box;
   font-size: 1rem;
 }
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
 
 li {
   list-style: none;
@@ -16,7 +20,7 @@ a {
   text-decoration: none;
 }
 h1 {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-size: 3rem;
   text-align: center;
 }
@@ -43,6 +47,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding: 1rem 1.5rem;
   background-color: var(--accent-color);
   margin-bottom: 2rem;
@@ -56,12 +61,12 @@ p {
 
 .bar {
   display: block;
-  width: 50px;
-  height: 6px;
-  margin: 10px auto;
+  width: 3rem;
+  height: .36rem;
+  margin: .6rem auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: --var(--main-color);
+  background-color: var(--main-color);
 }
 
 

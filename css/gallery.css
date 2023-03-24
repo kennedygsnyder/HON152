@@ -5,20 +5,22 @@
     -moz-column-count:5;
     -moz-column-gap:5px;
     column-count:5;
-    column-gap:5px;
+    column-gap:10px;
     margin: 10px;
 }
 
 #gallery div {
-    margin-bottom:5px; /* to match column gap */
+    margin-bottom:10px; /* to match column gap */
+    padding: 5px;
+    border: #ccc 2px solid;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 #gallery p {
     max-height: 240px;
     padding-top: 10px;
     padding-bottom: 10px;
-    border: lightgrey 2px solid;
-    border-radius: 5px;
     margin: 0px;
     text-align: center;
 
@@ -34,7 +36,8 @@
 }
 
 #gallery div:hover {
-    background-color: lightgrey;
+    background-color: #e0ede0;
+    border:#a1c9a1 2px solid;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -46,12 +49,21 @@
 #gallery img {
     width: 100% !important;
     height: auto !important;
+    border-radius: 5px;
 }
 
 #gallery a {
     outline: none;
     text-decoration: none;
     color: black;
+}
+
+@media (max-width: 3000px) {
+    #gallery {
+        -moz-column-count:    4;
+        -webkit-column-count: 4;
+        column-count:         4;
+    }
 }
 
 @media (max-width: 1500px) {
@@ -67,6 +79,10 @@
         -moz-column-count:    2;
         -webkit-column-count: 2;
         column-count:         2;
+        column-gap: 5px;
+    }
+    #gallery div {
+        margin-bottom: 5px; /* to match column gap */
     }
     a {
         font-size: 1rem;
