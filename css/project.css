@@ -12,6 +12,11 @@ h2 {
     margin-left: 0px;
     margin-right: 0px;
 }
+.essay-text {
+    line-height: 175%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
 .author {
     margin-top: -2rem;
     font-weight: normal;
@@ -21,4 +26,9 @@ p {
     margin-left: 1rem;
     font-size: 1.25rem;
     margin-bottom: 1rem;
+}
+
+iframe {
+    height: 70vh;
+    margin: 0px;
 }
