@@ -38,9 +38,20 @@
         align-items: stretch;
         justify-content: center;
         padding: 0px;
+        width: 100%;
     }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1rem;
+    }
+
    img {
     display: block;
+    width: 100%;
    } 
 
    #leftbutton {
@@ -49,8 +60,8 @@
     justify-content: flex-start;
     position: relative;
     z-index:1;
-    width: 6rem;
-    margin-right: -6rem;
+    width: 5rem;
+    margin-right: -5rem;
     color: black;
    }
 
@@ -81,6 +92,8 @@
     width: 6rem;
     background-color: rgba(0,0,0,0);
    }
+
+
    button:hover {
     color: white;
    }
@@ -88,6 +101,13 @@
    .material-symbols-rounded {
     font-size: 6rem;
     transform: scale(.75, 1);
+   }
+   
+   @media (max-width: 1200px) { 
+    .material-symbols-rounded {
+        font-size: 4rem;
+        transform: scale(1, 1);
+    } 
    }
 
 </style>
@@ -127,11 +147,12 @@ function backwards() {
         <div>
             <img id="image" src="../resources/dexter_1.png">
         </div>
-        <div id="rightbutton">
-            <button onclick="forwards()" style="justify-content: flex-end">
-                <span class="material-symbols-rounded" style="margin-right:-1rem">chevron_right</span>
-            </button>
-        </div>
+            <div id="rightbutton">
+                <button onclick="forwards()" style="justify-content: flex-end">
+                    <span class="material-symbols-rounded" style="margin-right:-1rem">chevron_right</span>
+                </button>
+            </div>
+        
     </div>
 </div>
 
